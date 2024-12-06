@@ -1,108 +1,66 @@
 @extends('home.base')
+
 @section('content')
-    <!-- Start Page-title Area -->
-    <div class="page-title-area bg-black">
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}});">
+        </div>
+
+        <div class="page-header__shape-1 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-1.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
         <div class="container">
-            <div class="page-title-content">
+            <div class="page-header__inner">
                 <h2>{{$pageName}}</h2>
-                <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
-                </ul>
+                <div class="thm-breadcrumb__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>{{$pageName}}</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- End Page-title Area -->
+    </section>
+    <!--Page Header End-->
 
-    <section class="our-blog-section ptb-100 gray-light-bg">
+
+    <!--Services Page Start-->
+    <section class="services-page">
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="section-heading mb-5">
-                        <h2>Our Services</h2>
+
+                @foreach($services as $service)
+                <!--Services One Single Start-->
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="services-one__single">
+                            <div class="services-one__title-box">
+                                <h3 class="services-one__title">
+                                    <a href="{{route('service_detail',['id'=>$service->id])}}">
+                                        {{$service->title}}
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="services-one__img-box">
+                                <div class="services-one__img">
+                                    <img src="{{asset('home/serv/'.$service->photo)}}" alt="">
+                                </div>
+                                <div class="services-one__icon">
+                                    <span class="icon-pie-chart"></span>
+                                </div>
+                            </div>
+                            <div class="services-one__read-more">
+                                <a href="{{route('service_detail',['id'=>$service->id])}}">Read More<span class="icon-right-arrow"></span></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
+                    <!--Services One Single End-->
+                @endforeach
 
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Forex</span>
-                            <img src="{{asset('home/img/serv/forex.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Agriculture</span>
-                            <img src="{{asset('home/img/serv/agric.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Oil And Gas</span>
-                            <img src="{{asset('home/img/serv/oil.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Real Estate</span>
-                            <img src="{{asset('home/img/serv/estate.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Retirement and Insurance Services</span>
-                            <img src="{{asset('home/img/serv/retire.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="single-blog-card card border-0 shadow-sm">
-                        <div class="blog-img">
-                            <span class="category position-absolute">Gold</span>
-                            <img src="{{asset('home/img/serv/gold.jpg')}}" class="card-img-top position-relative img-fluid" alt="blog">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text"></p>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </div>
     </section>

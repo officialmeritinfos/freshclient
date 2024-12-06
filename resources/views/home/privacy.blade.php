@@ -1,71 +1,73 @@
 @extends('home.base')
+
 @section('content')
-    <!-- Start Page-title Area -->
-    <div class="page-title-area bg-black">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}}</h2>
-                <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
-                </ul>
-            </div>
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}});">
         </div>
-    </div>
-    <!-- End Page-title Area -->
 
-
-    <!--About One Start-->
-    <section class="about-one">
+        <div class="page-header__shape-1 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-1.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
         <div class="container">
-            <div class="section-title text-center">
-                <span class="section-title__tagline"></span>
-            </div>
-            <div class="row">
-
-                <div class="col-xl-12">
-                    <div class="about-one__right">
-                        <h4>1. Introduction</h4>
-                        <p>Hi! We've created this privacy policy to explain how we collect, use, disclose and protect your information; including any nonpublic personal information.</p>
-
-                        <p>This policy applies to information we collect when you use our website (collectively, "Services") or otherwise interact with us as described below. We may change this privacy policy from time to time. If we make changes, we will notify you by revising the date at the top of this policy, and in some cases, we may provide you with additional notice (such as by adding a statement to the homepages of our website or by sending you an email notification).</p>
-
-                        <p>We encourage you to review the privacy policy whenever you interact with us to stay informed about our information practices and the ways you can help protect your privacy. This privacy policy applies to the Services provided by {{$siteName}} (“we” or “us”).</p>
-
-                        <h4>2. Collection of Information</h4>
-                        <p>When you create an {{$siteName}} account, we may collect information, including non-public personal information about you from non-affiliated third party service providers in order to verify your identity and for fraud prevention, including your prior addresses and names.</p>
-                        <p>We may collect information you provide to us, such as your name, email address and any other information you choose to provide. For example, we may collect such information if you request an invite to join Quantum Finance or if you enter into any contest or promotion.</p>
-
-                        <h4>3. Cookies</h4>
-                        <p>Most web browsers are set to accept cookies by default. If you prefer, you can usually choose to set your browser to remove or reject browser cookies. Please note that if you choose to remove or reject cookies, this could affect the availability and functionality of our Services.</p>
-
-                        <h4>4. Security</h4>
-                        <p>{{$siteName}} takes reasonable measures to help protect all information about you from loss, theft, misuse and unauthorized access, disclosure, alteration and destruction. Additionally, Quantum Finance implements policies designed to protect the confidentiality and security of your nonpublic personal information, including a privacy protection policy. Quantum Finance limits access to your nonpublic personal information to employees that have a business reason to know such information, and implement security practices and procedures designed to protect the confidentiality and security of such information and prohibit unlawful disclosure of such information in accordance with its policies.</p>
-
-                        <p>Where you have chosen a password that allows you to access certain parts of the website, you are responsible for keeping this password confidential. We advise you not to share your password with anyone. We have also taken measures to comply with provision of security facilities for the protection of your nonpublic personal information through the set up of firewalls, limited access to specified authorized individuals, encryption and continuous capacity building for relevant personnel. We therefore have digital and physical security measures to limit and eliminate possibilities of data privacy breach incidents.</p>
-
-                        <p>Although we use appropriate security measures once we have received your personal information, the transmission of data over the internet (including by email) is never completely secure. We endeavour to protect personal information, but we cannot guarantee the security of data transmitted to us or by us. We will notify you and any applicable regulator of a breach where we are legally required to do so.</p>
-
-                        <h4>5. Where we store your Data</h4>
-                        <p>The data that we collect from you will be transferred to and stored at a destination outside the United States of America. By submitting your personal data, you agree to this transfer, storing or processing. We will take all steps reasonably necessary to ensure that your data is treated securely and in accordance with this privacy policy.All information you provide to us is stored on our secure cloud storage solution.</p>
-
-                        <p>Your personal information will not be retained for longer than is necessary for the purposes for which it was processed.</p>
-
-                        <h4>6. How long we keep your personal information</h4>
-                        <p>We will hold your personal information on Quantum Finance’s systems for as long as is necessary to fulfil the purpose for which it was collected or to comply with legal, regulatory or internal policy requirements.</p>
-
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="about-one__right">
-
-
-                    </div>
+            <div class="page-header__inner">
+                <h2>{{$pageName}}</h2>
+                <div class="thm-breadcrumb__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>{{$pageName}}</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!--About One End-->
+    <!--Page Header End-->
 
+
+    <!-- Start Terms of Service Area -->
+    <section class="terms-of-service-area bg-f9f9f9 ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="terms-of-service-content">
+                        <p><i>This Terms of Service was last updated on January 1, 2022.</i></p>
+                        <h3>1. Our website</h3>
+                        <p>Our website address is: <strong>{{env('APP_URL')}}</strong></p>
+                        <blockquote class="blockquote">
+                            <p>We collect certain data from you directly, like information you enter yourself,
+                                data about your participation in courses, and data from third-party platforms
+                                you connect with <strong>{{$siteName}}</strong>. We also collect some data automatically, like information about your device and what parts of our Services you interact with or spend time using.</p>
+                        </blockquote>
+                        <h3>2. Data You Provide to Us</h3>
+                        <p>We may collect different data from or about you depending on how you use the Services. Below are some examples to help you better understand the data we collect.</p>
+                        <h3>3. How We Get Data About You</h3>
+                        <p>We use tools like cookies, web beacons, analytics services, and advertising providers to gather the data listed above. Some of these tools offer you the ability to opt out of data collection.</p>
+                        <h3>4. What We Use Your Data For</h3>
+                        <ol>
+                            <li>Responding to your questions and concerns;</li>
+                            <li>Sending you administrative messages and information, including messages from instructors and teaching assistants, notifications about changes to our Service, and updates to our agreements;</li>
+                            <li>Sending push notifications to your wireless device to provide updates and other relevant messages (which you can manage from the “options” or “settings” page of the mobile app);</li>
+                        </ol>
+                        <h3>5. Your Choices About the Use of Your Data</h3>
+                        <p>You can choose not to provide certain data to us, but you may not be able to use certain features of the Services.</p>
+                        <ul>
+                            <li>To stop receiving promotional communications from us, you can opt out by using the unsubscribe mechanism in the promotional communication you receive or by changing the email preferences in your account. Note that regardless of your email preference settings, we will send you transactional and relationship messages regarding the Services, including administrative confirmations, order confirmations, important updates about the Services, and notices about our policies.</li>
+                            <li>The browser or device you use may allow you to control cookies and other types of local data storage. Your wireless device may also allow you to control whether location or other data is collected and shared. You can manage Adobe’s LSOs through their Website Storage Settings panel.</li>
+                            <li>To get information and control cookies used for tailored advertising from participating companies, see the consumer opt-out pages for the Network Advertising Initiative and Digital Advertising Alliance, or if you’re located in the European Union, visit the Your Online Choices site. To opt out of Google’s display advertising or customize Google Display Network ads, visit the Google Ads Settings page. To opt out of Taboola’s targeted ads, see the Opt-out Link in their Cookie Policy.</li>
+                            <li>To update data you provide directly, log into your account and update your account at any time.</li>
+                        </ul>
+                        <h3>6. Our Policy Concerning Children</h3>
+                        <p>We recognize the privacy interests of children and encourage parents and guardians to take an active role in their children’s online activities and interests. Children under 13 (or under 16 in the European Economic Area) should not use the Services. If we learn that we’ve collected personal data from a child under those ages, we will take reasonable steps to delete it.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- End Terms of Service Area -->
 
 @endsection

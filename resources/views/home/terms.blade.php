@@ -1,69 +1,181 @@
 @extends('home.base')
+
 @section('content')
-    <!-- Start Page-title Area -->
-    <div class="page-title-area bg-black">
-        <div class="container">
-            <div class="page-title-content">
-                <h2>{{$pageName}}</h2>
-                <ul>
-                    <li><a href="{{url('/')}}">Home</a></li>
-                    <li>{{$pageName}}</li>
-                </ul>
-            </div>
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}});">
         </div>
-    </div>
-    <!-- End Page-title Area -->
 
-
-    <!--About One Start-->
-    <section class="about-one">
+        <div class="page-header__shape-1 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-1.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
         <div class="container">
-            <div class="section-title text-center">
-                <span class="section-title__tagline"></span>
-            </div>
-            <div class="row">
-
-                <div class="col-xl-12">
-                    <div class="about-one__right">
-                        <h4>1. Introduction</h4>
-                        <p>{{$siteName}} is an automated investment platform available online and through mobile applications.</p>
-                        <p>We offer an automated investment service. As our Client, we will manage your investment on your behalf in a very low cost manner to maximize your returns. By using our website, you enter into a series of legally binding agreements. You also agree to our Privacy Policy which covers how we collect, use, share and store your personal information.</p>
-
-                        <p>When you access our website ("our website" (which includes our blog), "our app" or “{{$siteName}}") as a User and Client, you're agreeing to be bound by the following Terms of Use. Please therefore take the time to read the following binding Terms of Use below. For the purpose of this agreement a User is an individual who uses our website to evaluate our service, or for educational purposes and a Client is an individual who signs up on {{$siteName}} that entitles the Client to have her or his investment portfolio managed by {{$siteName}}. This Agreement, as well as the Privacy Policy applies to both Users and Clients. If you elect to become a Client, you will be subject to these Terms of Use, our Client Agreement, our Privacy Policy and any additional terms to which you agree when you create and fund an investment plan.</p>
-
-                        <h4>2. Obligations</h4>
-                        <p>You must be 18 or older to access our website or mobile applications.</p>
-
-                        <p>{{$siteName}} is intended solely for individuals who are 18 or older. Any access to or use of {{$siteName}} by anyone under 18 is unauthorized, unlicensed, and in violation of these Terms of Use. By accessing or using {{$siteName}}, you represent and warrant that you are 18 or older.</p>
-                        <p>In order to access certain features of {{$siteName}}, you must register to create an account ("User Account"). When you register, you will be asked to choose a password, which you will be required to use to access your User Account. {{$siteName}} has physical, electronic and procedural safeguards that comply with regulatory standards to guard Users' and Clients' non-public personal information (see Privacy Policy). You are responsible for safeguarding your password and other User Account information. You agree not to disclose your password to any third party and you will notify {{$siteName}} immediately if your password is lost or stolen or if you suspect any unauthorized use of your User Account. As a User you agree that you shall be solely responsible for any activities or actions under your User Account, whether or not you have authorized such activities or actions. You agree that the information you provide to us on account registration through our website or mobile applications will be true, accurate, current, and complete.</p>
-
-                        <h4>3. Disclaimer and Limit of Liability</h4>
-                        <p>{{$siteName}} cannot be held responsible for any financial insights or recommendations provided to users.</p>
-
-                        <p>For a User who is not a Client You understand and acknowledge that the investment results you could obtain from investment information and financial insights provided by {{$siteName}} cannot be guaranteed and that {{$siteName}} Finance cannot be held responsible. All investments entail a risk of loss and that you may lose money. Investment management services may be offered to individuals who become clients, at the sole discretion of {{$siteName}}. Your election to engage our investment services are subject to your explicit enrollment and acceptance of this Terms of Use.. You agree and understand that your use of {{$siteName}} is for educational purposes only and is not intended to provide legal, tax or financial planning advice. You agree as a User that you are responsible for your own investment research and investment decisions, that {{$siteName}} is only one of many tools you may use as part of a comprehensive investment education process, that you should not and will not rely on {{$siteName}} as the primary basis of your investment decisions and, except as otherwise provided for herein, {{$siteName}} will not be liable for decisions/actions you take or authorize third parties to take on your behalf based on information you receive as a User of {{$siteName}} or information you otherwise see on our website.</p>
-
-                        <h4>4. Termination</h4>
-                        <p>Each of us can end this agreement at any time, subject to the maturity of all plans. We may terminate or suspend your access to {{$siteName}}, at any time with prior notice to you if your account is found to be fraudulent.</p>
-
-                        <p>We will fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity of anyone posting, publishing, or otherwise making available any User information, emails, or other materials that are believed to violate these Terms of Use. Any suspension, termination, or cancellation shall not affect your obligations to {{$siteName}} under these Terms of Use (including but not limited to ownership, indemnification, and limitation of liability), which by their sense and context are intended to survive such suspension, termination, or cancellation.</p>
-
-                        <h4>5. General Terms</h4>
-                        <p>In the event that any provision in these Terms of Use is held to be invalid or unenforceable, the remaining provisions will remain in full force and effect. The failure of a party to enforce any right or provision of these Terms of Use will not be deemed a waiver of such right or provision. You may not assign this Agreement (by operation of law or otherwise) without the prior written consent of {{$siteName}}, and any prohibited assignment will be null and void.</p>
-
-                        <p>{{$siteName}} may assign this Terms of Use Agreement or any rights hereunder without your consent. The relationship of the parties under these Terms of Use is that of independent contractors, and these Terms of Use will not be construed to imply that either party is the agent, employee, or joint venture of the other. Note that if you elect to become a Client, the relationship of the parties will be governed by these Terms of Use, our Privacy Policy and any additional terms to which you agree when you create and fund an investment account. We reserve the right to change this Agreement by posting a revised Terms of Use and we agree that changes cannot be retroactive. If you don't agree with these changes, you must stop using {{$siteName}}.</p>
-
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="about-one__right">
-
-
-                    </div>
+            <div class="page-header__inner">
+                <h2>{{$pageName}}</h2>
+                <div class="thm-breadcrumb__inner">
+                    <ul class="thm-breadcrumb list-unstyled">
+                        <li><a href="{{url('/')}}">Home</a></li>
+                        <li><span>/</span></li>
+                        <li>{{$pageName}}</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <!--About One End-->
+    <!--Page Header End-->
 
+    <!-- Start Terms of Service Area -->
+    <section class="terms-of-service-area bg-f9f9f9 ptb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <div class="terms-of-service-content">
+                        <p><i>This Terms of Service was last updated on January 1, 2022.</i></p>
+                        <h3 class="text-center" style="font-weight: bolder;">Terms and Conditions </h3>
+                        <p>Carefully read the rules for using the {{$siteName}} service. By accessing or using the site, you agree
+                            to comply with the conditions described in this document. If you do not agree to these terms,
+                            do not use this website.
+                        </p>
+                        <h3 class="text-center" style="font-weight: bolder;">Introduction</h3>
+                        <p>
+                            Welcome to {{$siteName}}s! These Terms and Conditions ("Terms") outline the rules and
+                            guidelines that govern your use of our website, platform, products, and services.
+                            By accessing or using our services, you agree to abide by these Terms. It is essential
+                            to read and understand these Terms carefully before using any of our services. If you
+                            have any questions or concerns, please contact us for clarification.
+                            These Terms constitute a legal agreement between you and {{$siteName}}s, establishing the
+                            rights and obligations of both parties. Your continued use of our services indicates
+                            your acceptance and adherence to these Terms.
+                        </p>
+                        <h3 class="text-center" style="font-weight: bolder;">Foreword</h3>
+                        <p>{{$siteName}} is an investment company specializing in Cryptocurrency trading and mining.
+                            Our Services may develop over time. This means that we may make
+                            changes, or replace  our Services at any time for any reason but with sufficient notice.
+                        </p>
+                        <p>
+                            <b>
+                                Registration and Account</b></p><br>
+                        To access and use certain functions on the Site, you need to create an account in {{$siteName}}(“Account”). You agree to:<br>
+                        1. Provide accurate, current and complete information when creating or updating an
+                        Account;<br>
+                        2. Maintain and timely update information about your Account;<br>
+                        3. Maintain the security and privacy of your credentials and restrict access to your account
+                        and your computer;<br>
+                        4. Immediately notify {{$siteName}} if you discover or otherwise suspect any security breaches
+                        associated with the Site;<br>
+                        5. Enable two-step authentication using a mobile application<br>
+
+                        <h3 class="text-center" style="font-weight: bolder;">Investment Policy</h3>
+                        <b>
+                            General Principles
+                        </b>
+                        <br>
+                        <p>
+                            Minin Assets is committed to providing investment services that prioritize transparency,
+                            diligence, and client-centricity. Our investment policy is designed to guide our approach
+                            and ensure that our clients' best interests are protected.
+                        </p>
+                        <p>
+                            We believe in thorough research, analysis, and risk management when it comes to investment
+                            decisions. Our goal is to provide our clients with well-informed recommendations that align
+                            with their investment objectives, risk tolerance, and financial circumstances.
+                        </p>
+                        <p>
+                            Investments in our Starter Plan minimum is limited to once. This means, you will need to increase
+                            your investment capital if you desire to keep investing the Starter Plan.
+                        </p>
+                        <b>
+                            Investment Objectives
+                        </b>
+                        <br>
+                        <p>
+                            Our primary objective is to help our clients achieve their investment goals while
+                            minimizing risks. We strive to provide investment strategies and opportunities that
+                            align with our clients' long-term growth objectives, capital preservation, or income
+                            generation needs.
+                        </p>
+                        <p>
+                            We prioritize diversification and asset allocation to mitigate risk and maximize potential
+                            returns. Our investment team conducts extensive research and analysis to identify
+                            investment opportunities across various asset classes, including but not limited to
+                            cryptocurrencies, traditional equities, bonds, and alternative investments.
+                        </p>
+                        <b>
+                            Risk Management
+                        </b>
+                        <br>
+                        <p>
+                            Minin Assets recognizes that all investments carry a certain degree of risk.
+                            We are committed to implementing robust risk management practices to protect our
+                            clients' capital and optimize risk-adjusted returns.
+                        </p>
+                        <p>
+                            Our risk management approach includes ongoing monitoring of portfolio performance,
+                            diversification across different investment types, asset allocation strategies, and regular
+                            assessment of market conditions. We also consider our clients' risk tolerance and investment
+                            preferences when formulating investment recommendations.
+                        </p>
+
+                        <b>
+                            Due Diligence and Research
+                        </b>
+                        <br>
+                        <p>
+                            Minin Assets maintains a rigorous due diligence process to evaluate potential investment
+                            opportunities. Our investment team conducts thorough research, including analysis of
+                            market trends, financial statements, and regulatory factors, to assess the viability and
+                            potential risks of each investment.
+                        </p>
+                        <p>
+                            We rely on a combination of quantitative and qualitative analysis to identify investments
+                            that align with our clients' objectives. This includes evaluating historical performance,
+                            assessing the management team, analyzing industry trends, and considering macroeconomic
+                            factors that may impact the investment's potential.
+                        </p>
+                        <b>
+                            Client Communication and Reporting
+                        </b>
+                        <br>
+                        <p>
+                            Minin Assets values open and transparent communication with our clients. We strive to
+                            provide regular updates and reports that offer insights into investment performance,
+                            portfolio allocations, and market conditions.
+                        </p>
+                        <p>
+                            Our clients can expect timely and comprehensive reporting that enables them to make
+                            informed decisions about their investments. We are readily available to address any
+                            questions or concerns that may arise regarding investment performance, strategy, or market
+                            dynamics.
+                        </p>
+                        <h3 class="text-center" style="font-weight: bolder;">Privacy Policy</h3>
+                        <br>
+                        Please refer to our Privacy Policy for information on how we collect, use and share your
+                        personal information.
+                        <br>
+                        <b>
+                            Internet Data Privacy
+                        </b><br>
+                        Transmission of data or information (including e-mail) over the Internet or other public
+                        networks is not 100% secure and may be lost, intercepted or altered during transport.
+                        Accordingly, {{$siteName}} shall not be liable for any damages that you may incur or expenses that
+                        you may incur as a result of any transmissions over the Internet or other public networks,
+                        including without limitation of transmissions, including exchanging email with {{$siteName}}containing your personal data. Although {{$siteName}} will make commercially reasonable efforts to
+                        protect the confidentiality of the information you provide to {{$siteName}} and processes such
+                        information in accordance with the {{$siteName}} Privacy Policy, in no case will the information you
+                        provide to {{$siteName}} be considered confidential, create any fiduciary obligations for you by {{$siteName}},
+                        or lead to any liability to you by {{$siteName}} in the event of inadvertent disclosure of such
+                        information by {{$siteName}} or access by a third persons without the consent of {{$siteName}}.<br><b>
+                            <br>
+
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- End Terms of Service Area -->
 
 @endsection

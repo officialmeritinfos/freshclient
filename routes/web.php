@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\Auth\RecoverPassword;
 use App\Http\Controllers\Auth\Register;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Transactions;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,36 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[HomeController::class,'index']);
-Route::get('index',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('index',[HomeController::class,'index'])->name('home1');
 Route::get('about',[HomeController::class,'about']);
 Route::get('plans',[HomeController::class,'plans']);
-Route::get('plan',[HomeController::class,'plans']);
 Route::get('terms',[HomeController::class,'terms']);
-Route::get('terms',[HomeController::class,'terms']);
-Route::get('services',[HomeController::class,'services']);
-Route::get('service/{id}/details',[HomeController::class,'serviceDetail'])
-    ->name('service.details');
-Route::get('faqs',[HomeController::class,'faqs']);
-Route::get('faq',[HomeController::class,'faqs']);
-Route::get('security',[HomeController::class,'security']);
-Route::get('estate',[HomeController::class,'estate']);
-Route::get('contact',[HomeController::class,'contact']);
-Route::get('loan',[HomeController::class,'loan']);
 Route::get('privacy',[HomeController::class,'privacy']);
-Route::get('career',[HomeController::class,'career']);
-Route::get('buy-btc',[HomeController::class,'buyBtc']);
-Route::get('register',[Register::class,'landingPage']);
-//Services
-Route::get('realestate',[HomeController::class,'realEstate']);
-Route::get('retirement',[HomeController::class,'retirement']);
-Route::get('stocks',[HomeController::class,'stocks']);
-Route::get('nft',[HomeController::class,'nft']);
-Route::get('forex',[HomeController::class,'forex']);
-Route::get('gold',[HomeController::class,'gold']);
-Route::get('agriculture',[HomeController::class,'agriculture']);
+Route::get('faqs',[HomeController::class,'faqs']);
+Route::get('contact',[HomeController::class,'contact']);
+Route::get('service',[HomeController::class,'service']);
+Route::get('service/{id}/details',[HomeController::class,'serviceId'])->name('service_detail');
 
-
-//Calculate return
-Route::post('calculate-return',[HomeController::class,'calculateReturn'])
-    ->name('calculate.return');
+Route::post('transactions/incoming/{customId}/account/{accountId}',[Transactions::class,'incoming']);
