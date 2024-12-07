@@ -8,9 +8,9 @@
     <meta name="description" content="{{$siteName}} | The best investment strategies to build your fortune">
     <meta name="keywords" content="business, corporate, cryptocurrency, investment, finance, network, passive, income, earn">
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('home/images/mentochain-white.png')}}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('home/images/mentochain-white.png')}}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('home/images/mentochain-white.png')}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('home/images/'.$web->logo)}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('home/images/'.$web->logo)}}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('home/images/'.$web->logo)}}" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- fonts -->
@@ -471,5 +471,18 @@
         });
     });
 </script>
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '00f4076c04ac6a87c64777c04a87a862ab501ef2';
+    window.smartsupp||(function(d) {
+        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+        c.type='text/javascript';c.charset='utf-8';c.async=true;
+        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
 </body>
 </html>
